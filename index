@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de Presentes</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f4ef;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #5c4b3b;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.icone {
+    font-size: 40px;
+}
+
+.titulo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.valor {
+    color: #8b6f47;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    border: none;
+    background: #8b6f47;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.sucesso {
+    color: green;
+    margin-top: 10px;
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎁 Lista de Presentes</h1>
+
+<div class="card">
+    <div class="icone">🚤</div>
+
+    <div class="titulo">
+        Passeio de Barco na Costa Amalfitana
+    </div>
+
+    <div class="valor">
+        R$ 550,00
+    </div>
+
+    <button onclick="copiarPix(this,
+'00020126510014br.gov.bcb.pix0120tha.boni@hotmail.com0205Barco5204000053039865406550.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866984143563048EC6')">
+        🎁 Presentear
+    </button>
+
+    <div class="sucesso">
+        ✅ Código Pix copiado!
+    </div>
+</div>
+
+<script>
+function copiarPix(botao, codigoPix) {
+    navigator.clipboard.writeText(codigoPix);
+
+    botao.innerHTML = "✅ Copiado";
+
+    const mensagem =
+        botao.parentElement.querySelector(".sucesso");
+
+    mensagem.style.display = "block";
+
+    setTimeout(() => {
+        botao.innerHTML = "🎁 Presentear";
+        mensagem.style.display = "none";
+    }, 3000);
+}
+</script>
+
+</body>
+</html>
