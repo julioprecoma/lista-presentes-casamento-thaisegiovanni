@@ -1,222 +1,245 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Lista de Presentes - Thaís & Giovanni</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 <style>
-
-:root{
-    --verde:#40402C;
-    --salvia:#ACAA8E;
-    --bege:#D0C9B9;
-    --fundo:#F2EEEC;
-    --card:#FAF8F6;
-    --texto:#5A584C;
-}
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    padding:24px;
-    background:var(--fundo);
-    color:var(--texto);
-    font-family:'Montserrat',sans-serif;
-}
-
-.container{
-    max-width:700px;
-    margin:auto;
-}
-
-.topo{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.nomes{
-    font-family:'Cormorant Garamond',serif;
-    font-size:52px;
-    color:var(--verde);
-    font-weight:400;
-    margin-bottom:5px;
-}
-
-.subtitulo{
-    font-family:'Cormorant Garamond',serif;
-    font-size:32px;
-    color:var(--verde);
-    margin-bottom:20px;
-}
-
-.linha{
-    width:80px;
-    height:1px;
-    background:var(--bege);
-    margin:20px auto;
-}
-
-.texto-topo{
-    font-size:14px;
-    line-height:1.7;
-}
-
-.card{
-    background:var(--card);
-    border:1px solid var(--bege);
-    border-radius:18px;
-    padding:24px;
-    margin-bottom:18px;
-}
-
-.icone{
-    font-size:42px;
-}
-
-.titulo{
-    margin-top:12px;
-    font-size:20px;
-    font-weight:600;
-    color:var(--verde);
-}
-
-.valor{
-    margin-top:8px;
-    font-size:24px;
-    font-weight:600;
-}
-
-.descricao{
-    margin-top:10px;
-    line-height:1.6;
-    font-size:14px;
-}
-
-.botao{
-    width:100%;
-    margin-top:18px;
-    border:none;
-    border-radius:12px;
-    background:var(--verde);
-    color:white;
-    padding:16px;
-    font-size:15px;
-    font-weight:600;
-    cursor:pointer;
-}
-
-.botao.copiado{
-    background:var(--salvia);
-}
-
-.sucesso{
-    display:none;
-    text-align:center;
-    margin-top:12px;
-    color:var(--verde);
-    font-size:14px;
-}
-
-.rodape{
-    text-align:center;
-    margin-top:40px;
-    font-size:12px;
-    opacity:.7;
-}
-
+:root{--verde:#40402C;--salvia:#ACAA8E;--bege:#D0C9B9;--fundo:#F2EEEC;--card:#FAF8F6;--texto:#5A584C;--suave:#8F8979}
+*{box-sizing:border-box}
+body{margin:0;padding:24px 18px;background:var(--fundo);color:var(--texto);font-family:Montserrat,Arial,sans-serif}
+.container{max-width:720px;margin:0 auto}
+.topo{text-align:center;padding:8px 0 28px}
+.voltar{display:inline-block;text-decoration:none;color:var(--verde);font-size:14px;font-weight:500;margin-bottom:18px}
+.voltar:hover{opacity:.75}
+h1{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:46px;line-height:1.05;font-weight:400;color:var(--verde)}
+.linha{width:92px;height:1px;margin:20px auto;background:var(--bege)}
+.intro{margin:0 auto;max-width:560px;font-size:14px;line-height:1.8;color:var(--texto)}
+.card{background:var(--card);border:1px solid var(--bege);border-radius:18px;padding:25px 22px;margin:18px 0;text-align:center;box-shadow:0 8px 22px rgba(64,64,44,.035)}
+.card h2{margin:0;font-size:20px;line-height:1.35;font-weight:600;color:var(--verde)}
+.valor{margin:12px 0 0;font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;line-height:1;font-weight:500;color:var(--verde)}
+.descricao{margin:16px 0 0;font-size:14px;line-height:1.65;color:var(--suave)}
+.botao{width:100%;margin-top:20px;border:none;border-radius:12px;background:var(--verde);color:white;padding:16px;font-family:Montserrat,Arial,sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s ease,transform .1s ease}
+.botao:active{transform:scale(.99)}
+.botao.copiado{background:var(--salvia)}
+.sucesso{display:none;margin-top:12px;color:var(--verde);font-size:13px;line-height:1.5}
+.rodape{text-align:center;margin:36px 0 12px;font-family:'Cormorant Garamond',Georgia,serif;color:var(--verde);font-size:24px}
+@media(max-width:420px){body{padding:20px 14px}h1{font-size:42px}.card{padding:23px 18px;border-radius:16px}.card h2{font-size:19px}.valor{font-size:30px}}
 </style>
 </head>
-
 <body>
-
-<div class="container">
-
-<div class="topo">
-
-<div class="nomes">
-Thaís & Giovanni
-</div>
-
-<div class="subtitulo">
-Lista de Presentes
-</div>
-
+<main class="container">
+<header class="topo">
+<a class="voltar" href="https://jcprecoma.my.canva.site/thais-giovanni">← Voltar ao Convite</a>
+<h1>Lista de Presentes</h1>
 <div class="linha"></div>
+<p class="intro">Ficamos muito felizes por compartilhar este momento com vocês. Caso desejem nos presentear, escolham uma das opções abaixo. Ao tocar em <strong>Presentear</strong>, o código Pix será copiado automaticamente.</p>
+</header>
+<article class="card">
+<h2>Passeio de Barco na Costa Amalfitana</h2>
+<div class="valor">550,00</div>
 
-<div class="texto-topo">
-Ficamos muito felizes por compartilhar este momento com vocês.<br>
-Ao tocar em <strong>Presentear</strong>, o código Pix será copiado automaticamente.
-</div>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126510014br.gov.bcb.pix0120tha.boni@hotmail.com0205Barco5204000053039865406550.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866984143563048EC6`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Roma Big Buss</h2>
+<div class="valor">240,00</div>
+<p class="descricao">Para o casal conhecer Roma do segundo andar do busão.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126500014br.gov.bcb.pix0120tha.boni@hotmail.com0204BUSS5204000053039865406240.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr1483686698035706304E716`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Visita guiada em fábrica de Muranos</h2>
+<div class="valor">380,00</div>
 
-</div>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126530014br.gov.bcb.pix0120tha.boni@hotmail.com0207Muranos5204000053039865406380.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr1483686697615596304C3D7`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Entrada para a Basílica de São Pedro</h2>
+<div class="valor">200,00</div>
 
-<div class="card">
+<button class="botao" type="button" onclick="copiarPix(this, `00020126540014br.gov.bcb.pix0120tha.boni@hotmail.com0208Basilica5204000053039865406200.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr1483686697233386304212F`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Ingresso para Museu e Capela Sistina</h2>
+<div class="valor">500,00</div>
 
-<div class="icone">🚤</div>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126680014br.gov.bcb.pix0120tha.boni@hotmail.com0222Museu e Capela Sistina5204000053039865406500.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866968967363043B76`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Visita ao interior do estádio do Juventus</h2>
+<div class="valor">350,00</div>
+<p class="descricao">O Allianz Italiano.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126540014br.gov.bcb.pix0120tha.boni@hotmail.com0208JUVENTUS5204000053039865406350.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866964649663048B92`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Almocinho com vista para o Coliseu</h2>
+<div class="valor">280,00</div>
 
-<div class="titulo">
-Passeio de Barco na Costa Amalfitana
-</div>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126550014br.gov.bcb.pix0120tha.boni@hotmail.com0209Almocinho5204000053039865406280.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866960926763044262`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Noite de ópera na Arena de Verona</h2>
+<div class="valor">600,00</div>
 
-<div class="valor">
-R$ 550,00
-</div>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126510014br.gov.bcb.pix0120tha.boni@hotmail.com0205opera5204000053039865406600.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866957464363048BF3`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Tour em vinhedos na Toscana</h2>
+<div class="valor">900,00</div>
+<p class="descricao">Porque vinho nunca é demais.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126630014br.gov.bcb.pix0120tha.boni@hotmail.com0217Vinhos na Toscana5204000053039865406900.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866954033363041F7D`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Cota Voo de balão sobre a Toscana</h2>
+<div class="valor">1.400,00</div>
+<p class="descricao">A Boituva Italiana.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126580014br.gov.bcb.pix0120tha.boni@hotmail.com0212Voo de balao52040000530398654071400.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr148368669499496630404C2`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Passeio de Gôndola em Veneza</h2>
+<div class="valor">550,00</div>
 
-<div class="descricao">
-Um passeio inesquecível pela costa italiana durante nossa lua de mel.
-</div>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126530014br.gov.bcb.pix0120tha.boni@hotmail.com0207gondola5204000053039865406550.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr148368669437090630446FF`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Aspirador Robô</h2>
+<div class="valor">3.000,00</div>
+<p class="descricao">O melhor amigo do casal, depois dos cães.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126630014br.gov.bcb.pix0120tha.boni@hotmail.com0217Robo melhor amigo52040000530398654073000.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866940123863042E1E`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Mapa da Itália</h2>
+<div class="valor">140,00</div>
+<p class="descricao">Para os noivos marcarem os melhores gelatos experimentados.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126600014br.gov.bcb.pix0120tha.boni@hotmail.com0214Mapa da Italia5204000053039865406140.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866928146363040669`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Fundo &quot;Combustível da Noiva&quot;</h2>
+<div class="valor">700,00</div>
+<p class="descricao">Todo mundo sabe que o humor da noiva é diretamente proporcional à quantidade de café que ela consome! Com este fundo, vocês ajudam a manter o estoque sempre cheio e garantem que o &quot;combustível&quot; essencial para a vida de casados nunca falte.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126540014br.gov.bcb.pix0120tha.boni@hotmail.com0208Cafezito5204000053039865406700.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866903576863049063`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Aluguel de Carro de Luxo/Esportivo</h2>
+<div class="valor">1500,00</div>
+<p class="descricao">Para um dia especial na viagem, alugar aquela máquina que ele sempre sonhou em conduzir, com ela rezando no banco do passageiro, claro!</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126600014br.gov.bcb.pix0120tha.boni@hotmail.com0214Carrao de luxo52040000530398654071500.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866900156863046C45`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Presente Surpresa</h2>
+<div class="valor">Valor Livre</div>
+<p class="descricao">Para você que gosta de dar pitaco no que devemos fazer. A pessoa escolhe o valor e diz o que devemos fazer com ele.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126600014br.gov.bcb.pix0120tha.boni@hotmail.com0214NOS SURPREENDA5204000053039865802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr1483686699646556304AEC4`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Curso relâmpago de &quot;Gestos Italianos&quot;</h2>
+<div class="valor">100,00</div>
+<p class="descricao">Um fundo para nos ajudar a comunicar com as mãos quando o nosso italiano não for suficiente.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126420014br.gov.bcb.pix0120tha.boni@hotmail.com5204000053039865406100.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr1483686698716176304C233`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Cota para garantir que vamos ver o David de Michelangelo e o Coliseu</h2>
+<div class="valor">680,00</div>
 
-<button class="botao"
-onclick="copiarPix(this,'00020126510014br.gov.bcb.pix0120tha.boni@hotmail.com0205Barco5204000053039865406550.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866984143563048EC6')">
-🎁 Presentear
-</button>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126420014br.gov.bcb.pix0120tha.boni@hotmail.com5204000053039865406680.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866970768063040859`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Tour para os noivos aprenderem sobre a história italiana</h2>
+<div class="valor">600,00</div>
+<p class="descricao">Para parecermos cultos.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126600014br.gov.bcb.pix0120tha.boni@hotmail.com0214Tour na Italia5204000053039865406600.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr1483686696830406304BAB7`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Aluguel de Vespa</h2>
+<div class="valor">160,00</div>
+<p class="descricao">Para fazermos o nosso &quot;filme&quot; italiano e sentirmos o vento no rosto, bem Lizzie McGuire.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126620014br.gov.bcb.pix0120tha.boni@hotmail.com0216Aluguel de vespa5204000053039865406160.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr148368669638547630422F3`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Fundo &quot;Pizza de Emergência&quot;</h2>
+<div class="valor">250,00</div>
+<p class="descricao">Porque, na Itália, a fome pode bater a qualquer momento e precisamos estar preparados.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126710014br.gov.bcb.pix0120tha.boni@hotmail.com0225Fundo Pizza de Emergencia5204000053039865406250.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866960279063040F77`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Cota de Gelato Ilimitado</h2>
+<div class="valor">300,00</div>
+<p class="descricao">Para garantirmos que vamos provar todos os sabores, de pistache a chocolate amargo.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126620014br.gov.bcb.pix0120tha.boni@hotmail.com0216Gelato Ilimitado5204000053039865406300.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866949985063045022`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Um dia de faxina</h2>
+<div class="valor">300,00</div>
+<p class="descricao">Pra podermos curtir as poucas horas livres que temos diante de tanto trabalho.</p>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126550014br.gov.bcb.pix0120tha.boni@hotmail.com0209Faxineira5204000053039865406300.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866945808763047203`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Ajuda para o mercado pós lua de mel</h2>
+<div class="valor">1.000,00</div>
 
-<div class="sucesso">
-✅ Código Pix copiado!
-</div>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126640014br.gov.bcb.pix0120tha.boni@hotmail.com0218Mercado Pos Viagem52040000530398654071000.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr1483686694225216304E362`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Lembrancinhas da Lua de Mel para a família e amigos</h2>
+<div class="valor">500,00</div>
 
-</div>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126420014br.gov.bcb.pix0120tha.boni@hotmail.com5204000053039865406500.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr148368669386783630447C9`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Balança para manter a forma após a Lua de Mel na Itália</h2>
+<div class="valor">280,00</div>
 
-<div class="rodape">
-Com carinho, Thaís & Giovanni
-</div>
+<button class="botao" type="button" onclick="copiarPix(this, `00020126540014br.gov.bcb.pix0120tha.boni@hotmail.com0208Balanca 5204000053039865406280.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866935477063046DF2`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<article class="card">
+<h2>Massagem relaxante para o noivo após ver a fatura da lua de mel</h2>
+<div class="valor">400,00</div>
 
-</div>
-
+<button class="botao" type="button" onclick="copiarPix(this, `00020126420014br.gov.bcb.pix0120tha.boni@hotmail.com5204000053039865406400.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866923152263047DAA`)">Presentear</button>
+<div class="sucesso">Código Pix copiado com sucesso.<br>Abra seu banco e utilize Pix Copia e Cola.</div>
+</article>
+<footer class="rodape">Com carinho,<br>Thaís & Giovanni</footer>
+</main>
 <script>
-
-function copiarPix(botao,codigo){
-
-navigator.clipboard.writeText(codigo);
-
-botao.innerHTML="✅ Copiado";
-botao.classList.add("copiado");
-
-const msg = botao.parentElement.querySelector(".sucesso");
-
-msg.style.display="block";
-
-setTimeout(()=>{
-
-botao.innerHTML="🎁 Presentear";
-botao.classList.remove("copiado");
-msg.style.display="none";
-
-},3000);
-
+async function copiarPix(botao,codigo){
+const original="Presentear";
+try{
+if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(codigo)}
+else{const area=document.createElement("textarea");area.value=codigo;area.style.position="fixed";area.style.left="-9999px";document.body.appendChild(area);area.focus();area.select();document.execCommand("copy");document.body.removeChild(area)}
+botao.innerHTML="✓ Copiado";botao.classList.add("copiado");
+const msg=botao.parentElement.querySelector(".sucesso");msg.style.display="block";
+setTimeout(()=>{botao.innerHTML=original;botao.classList.remove("copiado");msg.style.display="none"},3500)
+}catch(e){alert("Não foi possível copiar automaticamente. Atualize a página e tente novamente.")}
 }
-
 </script>
-
 </body>
 </html>
