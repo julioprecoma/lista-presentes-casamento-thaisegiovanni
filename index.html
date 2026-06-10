@@ -1,111 +1,221 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lista de Presentes</title>
+
+<title>Lista de Presentes - Thaís & Giovanni</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f7f4ef;
-    margin: 0;
-    padding: 20px;
+
+:root{
+    --verde:#40402C;
+    --salvia:#ACAA8E;
+    --bege:#D0C9B9;
+    --fundo:#F2EEEC;
+    --card:#FAF8F6;
+    --texto:#5A584C;
 }
 
-h1 {
-    text-align: center;
-    color: #5c4b3b;
+*{
+    box-sizing:border-box;
 }
 
-.card {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+body{
+    margin:0;
+    padding:24px;
+    background:var(--fundo);
+    color:var(--texto);
+    font-family:'Montserrat',sans-serif;
 }
 
-.icone {
-    font-size: 40px;
+.container{
+    max-width:700px;
+    margin:auto;
 }
 
-.titulo {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
+.topo{
+    text-align:center;
+    margin-bottom:40px;
 }
 
-.valor {
-    color: #8b6f47;
-    font-size: 18px;
-    margin: 10px 0;
+.nomes{
+    font-family:'Cormorant Garamond',serif;
+    font-size:52px;
+    color:var(--verde);
+    font-weight:400;
+    margin-bottom:5px;
 }
 
-button {
-    width: 100%;
-    border: none;
-    background: #8b6f47;
-    color: white;
-    padding: 14px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
+.subtitulo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    color:var(--verde);
+    margin-bottom:20px;
 }
 
-button:hover {
-    opacity: 0.9;
+.linha{
+    width:80px;
+    height:1px;
+    background:var(--bege);
+    margin:20px auto;
 }
 
-.sucesso {
-    color: green;
-    margin-top: 10px;
-    display: none;
+.texto-topo{
+    font-size:14px;
+    line-height:1.7;
 }
+
+.card{
+    background:var(--card);
+    border:1px solid var(--bege);
+    border-radius:18px;
+    padding:24px;
+    margin-bottom:18px;
+}
+
+.icone{
+    font-size:42px;
+}
+
+.titulo{
+    margin-top:12px;
+    font-size:20px;
+    font-weight:600;
+    color:var(--verde);
+}
+
+.valor{
+    margin-top:8px;
+    font-size:24px;
+    font-weight:600;
+}
+
+.descricao{
+    margin-top:10px;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.botao{
+    width:100%;
+    margin-top:18px;
+    border:none;
+    border-radius:12px;
+    background:var(--verde);
+    color:white;
+    padding:16px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.botao.copiado{
+    background:var(--salvia);
+}
+
+.sucesso{
+    display:none;
+    text-align:center;
+    margin-top:12px;
+    color:var(--verde);
+    font-size:14px;
+}
+
+.rodape{
+    text-align:center;
+    margin-top:40px;
+    font-size:12px;
+    opacity:.7;
+}
+
 </style>
 </head>
 
 <body>
 
-<h1>🎁 Lista de Presentes</h1>
+<div class="container">
+
+<div class="topo">
+
+<div class="nomes">
+Thaís & Giovanni
+</div>
+
+<div class="subtitulo">
+Lista de Presentes
+</div>
+
+<div class="linha"></div>
+
+<div class="texto-topo">
+Ficamos muito felizes por compartilhar este momento com vocês.<br>
+Ao tocar em <strong>Presentear</strong>, o código Pix será copiado automaticamente.
+</div>
+
+</div>
 
 <div class="card">
-    <div class="icone">🚤</div>
 
-    <div class="titulo">
-        Passeio de Barco na Costa Amalfitana
-    </div>
+<div class="icone">🚤</div>
 
-    <div class="valor">
-        R$ 550,00
-    </div>
+<div class="titulo">
+Passeio de Barco na Costa Amalfitana
+</div>
 
-    <button onclick="copiarPix(this,
-'00020126510014br.gov.bcb.pix0120tha.boni@hotmail.com0205Barco5204000053039865406550.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866984143563048EC6')">
-        🎁 Presentear
-    </button>
+<div class="valor">
+R$ 550,00
+</div>
 
-    <div class="sucesso">
-        ✅ Código Pix copiado!
-    </div>
+<div class="descricao">
+Um passeio inesquecível pela costa italiana durante nossa lua de mel.
+</div>
+
+<button class="botao"
+onclick="copiarPix(this,'00020126510014br.gov.bcb.pix0120tha.boni@hotmail.com0205Barco5204000053039865406550.005802BR5919Thais Boni de Santo6009Sao Paulo62230519daqr14836866984143563048EC6')">
+🎁 Presentear
+</button>
+
+<div class="sucesso">
+✅ Código Pix copiado!
+</div>
+
+</div>
+
+<div class="rodape">
+Com carinho, Thaís & Giovanni
+</div>
+
 </div>
 
 <script>
-function copiarPix(botao, codigoPix) {
-    navigator.clipboard.writeText(codigoPix);
 
-    botao.innerHTML = "✅ Copiado";
+function copiarPix(botao,codigo){
 
-    const mensagem =
-        botao.parentElement.querySelector(".sucesso");
+navigator.clipboard.writeText(codigo);
 
-    mensagem.style.display = "block";
+botao.innerHTML="✅ Copiado";
+botao.classList.add("copiado");
 
-    setTimeout(() => {
-        botao.innerHTML = "🎁 Presentear";
-        mensagem.style.display = "none";
-    }, 3000);
+const msg = botao.parentElement.querySelector(".sucesso");
+
+msg.style.display="block";
+
+setTimeout(()=>{
+
+botao.innerHTML="🎁 Presentear";
+botao.classList.remove("copiado");
+msg.style.display="none";
+
+},3000);
+
 }
+
 </script>
 
 </body>
